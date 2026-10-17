@@ -27,3 +27,11 @@ Keep `index.html`, `style.css`, `script.js`, and the `photos/` folder together. 
 - No phone number or home address is included.
 - Project links point to the existing repositories linked from the portfolio.
 - Before submitting, make sure the personal details and social links are accurate and that you are comfortable publishing the included photos.
+
+## Credits & Attributions
+
+- **Fonts:** DM Mono, DM Sans and Playfair Display, loaded from Google Fonts.
+- **Photography and artwork:** Personal photographs and painting, where applicable, by Hiya Udeshi.
+- **Technologies:** HTML, CSS and JavaScript.
+
+Any third-party code snippets, libraries or assets used in this project should be credited to their original sources, with links where applicable.
