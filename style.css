@@ -917,83 +917,100 @@ button.back:focus-visible {
     font-size: 10px;
   }
 /* Mobile layout improvements — desktop remains unchanged */
-@media (max-width: 600px) {
-  .desk {
-    position: relative;
-    display: block;
-    flex: 1;
-    min-height: 300px;
-    height: auto;
-    padding: 0;
-    margin: 12px 0;
-    overflow: hidden;
-  }
-
-  .desk .object {
-    position: absolute;
-    min-height: 0;
-    margin: 0;
-  }
-
-  .obj-canvas {
-    left: 4%;
-    top: 6%;
-    width: 39%;
-    height: 39%;
-    padding: 8px;
-  }
-
-  .obj-camera {
-    left: 52%;
-    top: 7%;
-    width: 40%;
-    height: 34%;
-    padding: 8px;
-  }
-
-  .obj-notes {
-    left: 8%;
-    top: 53%;
-    width: 36%;
-    height: 32%;
-    padding: 8px;
-  }
-
-  .obj-projects {
-    left: 49%;
-    bottom: 6%;
-    width: 25%;
-    height: 27%;
-    padding: 8px;
-  }
-
-  .obj-sticker {
-    left: 41%;
-    bottom: 38%;
-    width: 17%;
-    height: 18%;
-    padding: 5px;
-  }
-
-  .obj-coffee {
-    right: 4%;
-    bottom: 39%;
-    width: 24%;
-    height: 20%;
-    padding: 7px;
-  }
-
-  .desk-scribble {
-    display: none !important;
-  }
-
-  .quickbar {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+/* Final mobile layout fix */
+@media (max-width: 760px) {
+  #home {
+    padding: 12px 14px 20px !important;
     gap: 8px;
   }
 
-  .quickbar button {
+  #home .intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  #home .intro h1 {
+    font-size: clamp(76px, 21vw, 128px) !important;
+    line-height: 1.04 !important;
+    margin: 0 !important;
+  }
+
+  #home .intro .lede {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  #home .desk {
+    position: relative;
+    display: block;
+    flex: 1 1 auto;
+    min-height: 260px !important;
+    height: auto;
+    margin: 8px 0 !important;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  #home .desk .object {
+    position: absolute !important;
+    min-height: 0;
+    margin: 0;
+    max-width: none;
+  }
+
+  #home .obj-canvas {
+    left: 4%; top: 6%;
+    width: 39%; height: 39%;
+    padding: 8px;
+  }
+
+  #home .obj-camera {
+    left: 52%; top: 7%;
+    width: 40%; height: 34%;
+    padding: 8px;
+  }
+
+  #home .obj-notes {
+    left: 8%; top: 53%;
+    width: 36%; height: 32%;
+    padding: 8px;
+  }
+
+  #home .obj-projects {
+    left: 49%; bottom: 6%;
+    width: 25%; height: 27%;
+    padding: 8px;
+  }
+
+  #home .obj-sticker {
+    left: 41%; bottom: 38%;
+    width: 17%; height: 18%;
+    padding: 5px;
+  }
+
+  #home .obj-coffee {
+    right: 4%; bottom: 39%;
+    width: 24%; height: 20%;
+    padding: 7px;
+  }
+
+  #home .desk-scribble {
+    display: none !important;
+  }
+
+  #home .quickbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  #home .quickbar button {
     width: 100%;
     min-width: 0;
     padding: 12px 6px;
