@@ -72,3 +72,42 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#projectModal')?
 
 // About: open the detailed note on demand, keeping the main page compact.
 (()=>{const modal=document.getElementById('aboutDetailModal');const trigger=document.getElementById('aboutReadMore');if(!modal||!trigger)return;const close=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true')};trigger.addEventListener('click',()=>{modal.classList.add('open');modal.setAttribute('aria-hidden','false')});modal.querySelectorAll('[data-close-about]').forEach(el=>el.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});})();
+// FIX: Prevent the About popup from leaking onto other screens.
+(() => {
+  const modal = document.getElementById('aboutDetailModal');
+  const trigger = document.getElementById('aboutReadMore');
+
+  if (!modal) return;
+
+  function closeAboutPopup() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    modal.style.display = 'none';
+  }
+
+  function openAboutPopup() {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    modal.style.display = 'flex';
+    modal.style.position = 'fixed';
+    modal.style.inset = '0';
+    modal.style.zIndex = '9999';
+  }
+
+  closeAboutPopup();
+
+  trigger?.addEventListener('click', openAboutPopup);
+
+  modal.querySelectorAll('[data-close-about]').forEach(button => {
+    button.addEventListener('click', closeAboutPopup);
+  });
+
+  document.querySelectorAll('[data-home], [data-open], .wordmark')
+    .forEach(button => {
+      button.addEventListener('click', closeAboutPopup);
+    });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeAboutPopup();
+  });
+})();
