@@ -496,3 +496,37 @@ body.night .project-modal-tags span{border-color:#c4a15a}
   margin-bottom: 12px;
 }
 /* Contact page scroll fix */
+/* FIX: Keep inactive screens hidden and prevent page overlap */
+#stage {
+  position: relative;
+  isolation: isolate;
+}
+
+#stage > .screen {
+  display: none;
+}
+
+#stage > .screen.active {
+  display: flex;
+}
+
+/* Keep the About page inside its own screen */
+#about.screen {
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Keep the home screen from showing About content */
+#home.screen:not(.active),
+#about.screen:not(.active),
+#canvas.screen:not(.active),
+#photos.screen:not(.active),
+#work.screen:not(.active),
+#experience.screen:not(.active),
+#terminal.screen:not(.active),
+#contact.screen:not(.active),
+#vibe.screen:not(.active),
+#dotsGame.screen:not(.active) {
+  display: none !important;
+}
