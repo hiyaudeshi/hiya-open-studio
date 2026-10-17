@@ -3,35 +3,40 @@
 A personal portfolio built with HTML, CSS and JavaScript. The site includes an interactive studio homepage, About, project details, photography gallery, experience, paint canvas, terminal and contact links.
 
 ## Run locally
-Keep `index.html`, `style.css`, `script.js`, and the `photos/` folder together. Open `index.html` in a browser.
+
+Keep `index.html`, `style.css`, `script.js`, `README.md`, and the image assets together in the repository root. Open `index.html` in a browser.
 
 ## Publish with GitHub Pages (free)
-1. Sign in to GitHub and create a **new public repository** named `hiya-open-studio` (or another name you prefer).
-2. Upload `index.html`, `style.css`, `script.js`, `README.md`, and the entire `photos/` folder to the repository's **root**. Do not upload only the ZIP file.
-3. Open the repository's **Settings → Pages**.
+
+1. Create a public GitHub repository named `hiya-open-studio`.
+2. Upload `index.html`, `style.css`, `script.js`, `README.md`, and all required image assets to the repository root. Do not upload only the ZIP file.
+3. Open **Settings → Pages**.
 4. Under **Build and deployment**, choose **Deploy from a branch**.
 5. Select branch `main` and folder `/(root)`, then click **Save**.
-6. Wait for GitHub Pages to publish. The URL will usually look like `https://YOUR-USERNAME.github.io/hiya-open-studio/`.
-7. Open that URL in an incognito/private browser window and test the checklist below.
+6. Wait for GitHub Pages to publish.
+7. Open the live URL in an incognito/private browser window and test the checklist below.
 
 ## Final submission checklist
+
 - [ ] Live website opens publicly in incognito without a login.
 - [ ] Public source-code repository opens in incognito.
-- [ ] Homepage and all screens load; use the return button to get back to the studio.
-- [ ] About, all project detail overlays, repository links, photo gallery, paint tools, terminal, and contact links work.
-- [ ] Photos load (keep the `photos/` folder in the repository root).
-- [ ] Test a narrow/mobile screen; there should be no horizontal page scrolling and text/buttons should remain usable.
-- [ ] Submit both the live URL and repository URL in the class portal.
+- [ ] Homepage and all screens load; return buttons navigate correctly.
+- [ ] About, project detail overlays, repository links, photo gallery, paint tools, terminal and contact links work.
+- [ ] All required images load.
+- [ ] Mobile layout has no horizontal scrolling and text and buttons remain usable.
+- [ ] Submit both the live website URL and repository URL through the class portal.
 
 ## Notes
+
 - No phone number or home address is included.
-- Project links point to the existing repositories linked from the portfolio.
-- Before submitting, make sure the personal details and social links are accurate and that you are comfortable publishing the included photos.
+- Project links point to the repositories linked from the portfolio.
+- Check that personal details, social links and published photos are accurate and safe to share.
 
 ## Credits & Attributions
 
-- **Fonts:** DM Mono, DM Sans and Playfair Display, loaded from Google Fonts.
-- **Photography and artwork:** Personal photographs and painting, where applicable, by Hiya Udeshi.
-- **Technologies:** HTML, CSS and JavaScript.
+Credit any third-party code snippets, libraries, photographs, illustrations or other assets used in this project. Include the original source links and applicable licences where available.
 
-Any third-party code snippets, libraries or assets used in this project should be credited to their original sources, with links where applicable.
+- Fonts: DM Mono, DM Sans and Playfair Display, loaded from Google Fonts.
+- Technologies: HTML, CSS and JavaScript.
+
+Add specific credits for any borrowed code or assets before submitting.
