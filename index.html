@@ -1,5 +1,52 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hiya Udeshi — an interactive creative portfolio."><title>Hiya's Open Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Hiya Udeshi — an interactive creative portfolio."><title>Hiya's Open Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+<style id="contact-page-spacing-fix">
+/* Contact page only: keep the return button in the header flow and separate the headline from its rule. */
+#contact .screen-head {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: clamp(12px, 2vw, 28px) !important;
+  min-height: 48px !important;
+  height: auto !important;
+  margin: 0 0 clamp(24px, 4vh, 48px) !important;
+  padding: 0 0 14px !important;
+  z-index: 5 !important;
+}
+#contact .screen-head .back {
+  position: relative !important;
+  inset: auto !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  z-index: 6 !important;
+  cursor: pointer !important;
+}
+#contact .contact-card {
+  position: relative !important;
+  height: auto !important;
+  min-height: calc(100% - 100px) !important;
+  max-width: 1500px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: clamp(12px, 2.5vh, 28px) 0 clamp(22px, 4vh, 44px) !important;
+  justify-content: center !important;
+}
+#contact .contact-card h2 {
+  font-size: clamp(54px, 8.4vw, 150px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.055em !important;
+  margin: 18px 0 26px !important;
+  max-width: 100% !important;
+}
+@media (max-width: 760px) {
+  #contact .screen-head { gap: 8px !important; margin-bottom: 24px !important; padding-bottom: 12px !important; }
+  #contact .screen-head .back { min-height: 36px !important; padding: 0 10px !important; font-size: 9px !important; }
+  #contact .contact-card { min-height: 0 !important; padding-top: 12px !important; justify-content: flex-start !important; }
+  #contact .contact-card h2 { font-size: clamp(42px, 10.5vw, 76px) !important; line-height: 1.04 !important; margin: 14px 0 18px !important; }
+}
+</style>
+</head>
 <body>
 <div class="about-detail-modal" id="aboutDetailModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="aboutDetailTitle"><div class="about-detail-backdrop" data-close-about></div><article class="about-detail-card"><button class="about-detail-close" type="button" data-close-about aria-label="Close detailed note">CLOSE ×</button><p class="eyebrow">03 / FIELD NOTES · THE LONG VERSION</p><h2 id="aboutDetailTitle">A little more <em>context.</em></h2><p>I'm Hiya, a third-year MBATech Data Science student interested in the space where analytical thinking meets creative work. I enjoy making sense of data, building useful projects, and finding ways to explain complicated things clearly.</p><p>Photography taught me to notice small details and wait for the right moment. Painting gives me permission to experiment without needing every result to be perfect. Films and exploring keep my curiosity moving in directions I didn't plan.</p><p>Outside class, I've worked across student events, photography and media teams, including student committee work. I've also explored finance and PR during my internship at Colstay Limited. Different rooms, different people, same curiosity.</p><p>I like projects that are useful, thoughtfully made, and a little personal. I can go from debugging a model to stopping mid-walk because the light looks too good to ignore.</p><p class="handwrite">Data brain. Camera heart. Curiosity problem.</p></article></div>
 
@@ -30,5 +77,16 @@
 <section class="screen" id="vibe"><div class="screen-head"><button class="back" data-home>← RETURN TO STUDIO</button><span class="screen-tag">05 / VIBE CHECK</span><span class="screen-tag">NO WRONG ANSWERS</span></div><div class="quiz-wrap"><p class="eyebrow">A VERY SCIENTIFIC PERSONALITY TEST</p><h2>Pick your ideal kind<br>of <em>afternoon.</em></h2><div class="quiz-options"><button data-result="You are a CAMERA-ROLL ROMANTIC. You notice the tiny things, then pretend you just happened to be looking that way."><span>01</span><b>Wander until the light gets good</b><i>📷</i></button><button data-result="You are a CONTROLLED CHAOS CREATIVE. Give you a blank canvas and you will make a mess with excellent intentions."><span>02</span><b>Paint something with no plan</b><i>🎨</i></button><button data-result="You are a DATA DETECTIVE. You say 'quick question' and emerge three hours later with a spreadsheet."><span>03</span><b>Fall into a weird rabbit hole</b><i>⌘</i></button><button data-result="You are a SIDE-QUEST ENJOYER. The original plan was nice. The unexpected detour was better."><span>04</span><b>Find a new place and get lost</b><i>↗</i></button></div><div class="quiz-result" id="quizResult">YOUR RESULT WILL SHOW UP HERE. BE HONEST WITH YOURSELF.</div></div></section>
 <section class="screen" id="experience"><div class="screen-head"><button class="back" data-home>← RETURN TO STUDIO</button><span class="screen-tag">06 / THE PLOT SO FAR</span><span class="screen-tag">SELECTED CREDITS</span></div><h2 class="experience-title">A few different <em>hats.</em></h2><div class="experience-list"><article><span>INTERNSHIP</span><h3>Colstay Limited</h3><p>Finance and Public Relations — numbers, communication and the people side of business.</p></article><article><span>EVENTS & COMMITTEES</span><h3>Taqneeq / Sattva / Analytica / MUN</h3><p>Photography, hospitality, PR, operations and the many things behind the scenes.</p></article><article><span>CURRENT CURIOSITIES</span><h3>Data Science / AI / Cloud</h3><p>Learning by building, debugging and occasionally asking why the code hates me.</p></article></div><div class="experience-foot">HYPOTHESIS: I WILL FIGURE IT OUT. STATUS: TESTING.</div></section>
 <section class="screen" id="terminal"><div class="screen-head"><button class="back" data-home>← RETURN TO STUDIO</button><span class="screen-tag">07 / THE LITTLE TECH CORNER</span><span class="screen-tag">STARTS EMPTY, LIKE A NEW TAB</span></div><div class="terminal-room"><div class="terminal-top"><i></i><i></i><i></i><span>hiya@open-studio:~</span></div><div class="terminal-output" id="terminalOutput"><p>Welcome, curious person. Type <b>help</b> if you like instructions.</p></div><form id="terminalForm"><label for="terminalInput">›</label><input id="terminalInput" autocomplete="off" spellcheck="false" placeholder="try: whoami" autofocus></form><div class="terminal-help">whoami · interests · skills · projects · github · lens · about · help · hi · clear</div></div></section>
-<section class="screen" id="contact"><div class="screen-head"><button class="back" type="button" onclick="document.querySelectorAll('.screen').forEach(s => s.classList.toggle('active', s.id === 'home')); document.body.dataset.screen = 'home'; window.scrollTo({top: 0, behavior: 'smooth'});">← RETURN TO STUDIO</button><span class="screen-tag">08 / YOUR TURN</span><span class="screen-tag">OPEN INVITATION</span></div><div class="contact-card"><span class="contact-scribble">✳</span><h2>Got a good idea?<br><em>Let's make a mess.</em></h2><p>Have an idea, want to collaborate, or just want to say hi?</p><div class="contact-actions"><a href="https://github.com/hiyaudeshi" target="_blank" rel="noopener">GITHUB ↗</a><a href="https://in.linkedin.com/in/hiya-udeshi-7a3a47317" target="_blank" rel="noopener">LINKEDIN ↗</a><button id="copyEmail">COPY A HELLO ↗</button></div><p id="copyFeedback" class="copy-feedback">No email address guessed here. The hello button copies a friendly opener you can paste anywhere.</p><div class="closing-credits"><div class="closing-mark">H<span>·</span>U</div><div class="credits-copy"><p>THANKS FOR TAKING THE SCENIC ROUTE.</p><p>COLLECTED BY <b>HIYA</b></p><p>WRITTEN BY <b>CURIOSITY</b></p><p>SHOT ON <b>WHATEVER CAMERA WAS HANDY</b></p><p>ASSEMBLED WITH <b>TOO MANY OPEN TABS</b></p><p>POWERED BY <b>CTRL + Z</b></p></div></div></div></section>
-</main><div class="project-modal" id="projectModal" aria-hidden="true"><div class="project-modal-backdrop" data-close-project></div><section class="project-modal-card" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle"><button class="project-modal-close" type="button" data-close-project aria-label="Close project details">×</button><p class="eyebrow" id="projectModalKicker">PROJECT NOTES / 01</p><h2 id="projectModalTitle">Project title</h2><p class="project-modal-summary" id="projectModalSummary"></p><div class="project-modal-columns"><div><h3>WHAT IT DOES</h3><p id="projectModalDetail"></p></div><div><h3>TOOLS & IDEAS</h3><div id="projectModalTags" class="project-modal-tags"></div><p class="project-modal-note" id="projectModalNote"></p></div></div><a id="projectModalGithub" class="project-modal-github" href="#" target="_blank" rel="noopener">OPEN GITHUB REPOSITORY ↗</a></section></div><div class="photo-lightbox" id="lightbox"><button id="closeLightbox">×</button><img id="lightboxImg" alt="Selected photo"><p id="lightboxText"></p></div><div class="toast" id="toast" role="status"></div><script src="script.js"></script></body></html>
+<section class="screen" id="contact"><div class="screen-head"><button class="back" id="contactReturnButton" type="button" onclick="window.goHomeFromContact(event)">← RETURN TO STUDIO</button><span class="screen-tag">08 / YOUR TURN</span><span class="screen-tag">OPEN INVITATION</span></div><div class="contact-card"><span class="contact-scribble">✳</span><h2>Got a good idea?<br><em>Let's make a mess.</em></h2><p>Have an idea, want to collaborate, or just want to say hi?</p><div class="contact-actions"><a href="https://github.com/hiyaudeshi" target="_blank" rel="noopener">GITHUB ↗</a><a href="https://in.linkedin.com/in/hiya-udeshi-7a3a47317" target="_blank" rel="noopener">LINKEDIN ↗</a><button id="copyEmail">COPY A HELLO ↗</button></div><p id="copyFeedback" class="copy-feedback">No email address guessed here. The hello button copies a friendly opener you can paste anywhere.</p><div class="closing-credits"><div class="closing-mark">H<span>·</span>U</div><div class="credits-copy"><p>THANKS FOR TAKING THE SCENIC ROUTE.</p><p>COLLECTED BY <b>HIYA</b></p><p>WRITTEN BY <b>CURIOSITY</b></p><p>SHOT ON <b>WHATEVER CAMERA WAS HANDY</b></p><p>ASSEMBLED WITH <b>TOO MANY OPEN TABS</b></p><p>POWERED BY <b>CTRL + Z</b></p></div></div></div></section>
+</main><div class="project-modal" id="projectModal" aria-hidden="true"><div class="project-modal-backdrop" data-close-project></div><section class="project-modal-card" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle"><button class="project-modal-close" type="button" data-close-project aria-label="Close project details">×</button><p class="eyebrow" id="projectModalKicker">PROJECT NOTES / 01</p><h2 id="projectModalTitle">Project title</h2><p class="project-modal-summary" id="projectModalSummary"></p><div class="project-modal-columns"><div><h3>WHAT IT DOES</h3><p id="projectModalDetail"></p></div><div><h3>TOOLS & IDEAS</h3><div id="projectModalTags" class="project-modal-tags"></div><p class="project-modal-note" id="projectModalNote"></p></div></div><a id="projectModalGithub" class="project-modal-github" href="#" target="_blank" rel="noopener">OPEN GITHUB REPOSITORY ↗</a></section></div><div class="photo-lightbox" id="lightbox"><button id="closeLightbox">×</button><img id="lightboxImg" alt="Selected photo"><p id="lightboxText"></p></div><div class="toast" id="toast" role="status"></div><script src="script.js"></script>
+<script id="contact-navigation-fallback">
+window.goHomeFromContact = function (event) {
+  if (event) { event.preventDefault(); event.stopPropagation(); }
+  document.querySelectorAll('.screen').forEach(function (screen) {
+    screen.classList.toggle('active', screen.id === 'home');
+  });
+  document.body.dataset.screen = 'home';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+</script>
+</body></html>
