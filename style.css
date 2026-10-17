@@ -690,3 +690,45 @@ button.back:focus-visible {
 #contact .closing-credits {
   margin-bottom: 12px;
 }
+
+
+/* ABOUT DETAIL MODAL: explicit visibility and stacking fix. */
+#aboutDetailModal.about-detail-modal[aria-hidden="true"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+#aboutDetailModal.about-detail-modal.open[aria-hidden="false"] {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+#aboutDetailModal .about-detail-backdrop {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background: rgba(18, 30, 27, .68) !important;
+  backdrop-filter: blur(3px);
+}
+#aboutDetailModal .about-detail-card {
+  position: relative !important;
+  z-index: 1 !important;
+  width: min(760px, 100%) !important;
+  max-height: min(78vh, 720px) !important;
+  overflow-y: auto !important;
+  padding: clamp(24px, 4vw, 48px) !important;
+  background: #fbf5e9 !important;
+  color: #202820 !important;
+  border: 1px solid #c4a15a !important;
+  box-shadow: 12px 14px 0 rgba(18, 30, 27, .2) !important;
+}
+@media (max-width: 760px) {
+  #aboutDetailModal.about-detail-modal.open[aria-hidden="false"] { padding: 12px !important; }
+  #aboutDetailModal .about-detail-card { max-height: 82vh !important; }
+}
