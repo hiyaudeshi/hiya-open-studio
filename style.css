@@ -1008,10 +1008,11 @@ button.back:focus-visible {
     padding: 12px 6px;
     font-size: 10px;
   }
+ 
+}
+
+}
  @media (max-width: 768px) {
   .scribble-b {
     display: none !important;
   }
-}
-
-}
