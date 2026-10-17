@@ -919,82 +919,27 @@ button.back:focus-visible {
 /* Mobile layout improvements — desktop remains unchanged */
 /* Final mobile layout fix */
 @media (max-width: 760px) {
-  #home {
-    padding: 12px 14px 20px !important;
-    gap: 8px;
+  * {
+    box-sizing: border-box;
   }
 
-  #home .intro {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-    flex-shrink: 0;
+  body {
+    overflow-x: hidden;
+  }
+
+  .screen {
+    padding: 12px 14px 24px;
   }
 
   #home .intro h1 {
-    font-size: clamp(76px, 21vw, 128px) !important;
-    line-height: 1.04 !important;
-    margin: 0 !important;
+    font-size: clamp(76px, 18vw, 112px);
+    line-height: 0.95;
   }
 
-  #home .intro .lede {
+  #home .intro p {
     max-width: 100%;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  #home .desk {
-    position: relative;
-    display: block;
-    flex: 1 1 auto;
-    min-height: 260px !important;
-    height: auto;
-    margin: 8px 0 !important;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  #home .desk .object {
-    position: absolute !important;
-    min-height: 0;
-    margin: 0;
-    max-width: none;
-  }
-
-  #home .obj-canvas {
-    left: 4%; top: 6%;
-    width: 39%; height: 39%;
-    padding: 8px;
-  }
-
-  #home .obj-camera {
-    left: 52%; top: 7%;
-    width: 40%; height: 34%;
-    padding: 8px;
-  }
-
-  #home .obj-notes {
-    left: 8%; top: 53%;
-    width: 36%; height: 32%;
-    padding: 8px;
-  }
-
-  #home .obj-projects {
-    left: 49%; bottom: 6%;
-    width: 25%; height: 27%;
-    padding: 8px;
-  }
-
-  #home .obj-sticker {
-    left: 41%; bottom: 38%;
-    width: 17%; height: 18%;
-    padding: 5px;
-  }
-
-  #home .obj-coffee {
-    right: 4%; bottom: 39%;
-    width: 24%; height: 20%;
-    padding: 7px;
+    font-size: 16px;
+    line-height: 1.55;
   }
 
   #home .desk-scribble {
@@ -1002,18 +947,21 @@ button.back:focus-visible {
   }
 
   #home .quickbar {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
-    flex-shrink: 0;
-    margin: 0;
-    padding: 0;
+    width: 100%;
   }
 
   #home .quickbar button {
-    width: 100%;
     min-width: 0;
-    padding: 12px 6px;
-    font-size: 10px;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 5px;
+    font-size: 11px;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
